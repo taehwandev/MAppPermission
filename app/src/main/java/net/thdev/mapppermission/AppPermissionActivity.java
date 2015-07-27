@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class AppPermissionActivity extends Activity {
 
-    private static final String TAG = "AppPermisson";
+    private static final String TAG = "AppPermission";
 
     private final int MY_PERMISSION_REQUEST_STORAGE = 100;
 
