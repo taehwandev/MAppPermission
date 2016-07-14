@@ -1,8 +1,10 @@
 package net.thdev.mapppermission;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -31,6 +33,7 @@ public class AppPermissionActivity extends Activity {
     /**
      * Permission check.
      */
+    @TargetApi(Build.VERSION_CODES.M)
     private void checkPermission() {
         Log.i(TAG, "CheckPermission : " + checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE));
         if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
