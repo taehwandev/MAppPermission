@@ -24,15 +24,16 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
 
-    testCompile "junit:junit:$rootProject.ext.junitLibVersion"
+    compile rootProject.ext.appCompatV7
 
-    androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoLibVersion", {
+    // Kotlin
+    compile rootProject.ext.kotlinStdlib
+
+
+    testCompile junit
+
+    androidTestCompile(rootProject.ext.espressoCore, {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-}
-repositories {
-    mavenCentral()
 }

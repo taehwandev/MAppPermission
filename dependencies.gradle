@@ -1,0 +1,36 @@
+ext {
+    // Build SDK version
+    buildToolsVersion = '24.0.2'
+    compileSdkVersion = 24
+    targetSdkVersion = 24
+    minSdkVersion = 16
+
+
+    // Dependencies version
+    supportLibraryVersion = '24.2.0'
+
+    kotlinVersion = '1.0.3'
+
+    // Testing-only
+    junitLibVersion = '4.12'
+    espressoLibVersion = '2.2.2'
+
+
+    // Support library Dependencies
+    appCompatV7 = "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    supportV4 = "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+
+    // Kotlin
+    kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.ext.kotlinVersion"
+
+    // RX
+    // https://github.com/ReactiveX/RxAndroid
+    rxAndroid = 'io.reactivex:rxandroid:1.2.1'
+    rxJava = 'io.reactivex:rxjava:1.1.6'
+
+
+    // Testing-only dependencies
+    junit = "junit:junit:$rootProject.ext.junitLibVersion"
+
+    espressoCore = "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoLibVersion"
+}
